@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "prepare": "husky install",
+    "www": "gulp www",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs"
@@ -18,6 +19,12 @@
     "vue": "^3.4.21"
   },
   "devDependencies": {
-    "husky": "^9.1.7"
+    "del": "^8.0.0",
+    "fs": "^0.0.1-security",
+    "gulp": "^5.0.0",
+    "gulp-cli": "^3.0.0",
+    "gulp-replace": "^1.1.4",
+    "husky": "^9.1.7",
+    "path": "^0.12.7"
   }
 }
