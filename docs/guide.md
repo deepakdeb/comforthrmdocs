@@ -200,7 +200,7 @@ Navigation menus usually have social icons visitors can use to visit your social
 ```js
 // .vitepress/config.js
 socialLinks: [
-  { icon: "github", link: "https://github.com/Evavic44/Comfort HRM" },
+  { icon: "github", link: "https://github.com/codeboxrcodehub/comforthrmdocs" },
   { icon: "twitter", link: "https://twitter.com/victorekea" },
   { icon: "discord", link: "", target: "_blank" },
 ];
@@ -347,7 +347,7 @@ hero:
       link: /get-started
     - theme: alt
       text: View on GitHub
-      link: https://github.com/evavic44/Comfort HRM-template
+      link: https://github.com/codeboxrcodehub/comforthrmdocs-template
 ---
 ```
 
@@ -358,7 +358,7 @@ Additionally, you can also add a features section after the hero section. Simply
 ```bash
 # /docs/index.md
 ---
-link: https://github.com/evavic44/Comfort HRM-template
+link: https://github.com/codeboxrcodehub/comforthrmdocs-template
 
 features:
   - icon: ⚡️
@@ -538,7 +538,7 @@ In this tutorial, you've set-up a full-fledged documentation site and customized
 ## Resources
 
 - [Live Demo](https://Comfort HRM.vercel.app)
-- [GitHub Repo](https://github.com/Evavic44/Comfort HRM)
+- [GitHub Repo](https://github.com/codeboxrcodehub/comforthrmdocs)
 
 <hr>
 
