@@ -45,20 +45,49 @@ export default {
       '/comfortjob/': [
         {
           text: 'Comfort Job',
+          collapsible: false,
+        },
+        {
+          text: 'Getting Started',
           collapsible: true,
           items: [
             { text: 'How to install', link: '/comfortjob/how-to-install' },
             { text: 'How to Translate', link: '/comfortjob/how-to-translate' },
             { text: 'Template Override', link: '/comfortjob/template-override' },
-            { text: 'Shortcodes', link: '/comfortjob/shortcodes' },
-            { text: 'Classic Widgets', link: '/comfortjob/classic-widgets' },
-            { text: 'Elementor Widget', link: '/comfortjob/elementor-widgets' },
-            { text: 'Gutenberg Blocks', link: '/comfortjob/gutenberg-blocks' },
+            //{ text: 'Shortcodes', link: '/comfortjob/shortcodes' },
+            // { text: 'Classic Widgets', link: '/comfortjob/classic-widgets' },
+            // { text: 'Elementor Widget', link: '/comfortjob/elementor-widgets' },
+            // { text: 'Gutenberg Blocks', link: '/comfortjob/gutenberg-blocks' },
             { text: 'Hooks and Filters', link: '/comfortjob/hooks-and-filters' },
             { text: 'Code Samples', link: '/comfortjob/code-samples' },
           ],
+        },
+        {
+          text: 'Shortcode',
+          collapsible: true,
+          items: [
+            // { text: 'How to install', link: '/comfortjob/how-to-install' },
+            // { text: 'How to Translate', link: '/comfortjob/how-to-translate' },
+            // { text: 'Template Override', link: '/comfortjob/template-override' },
+            { text: '9 Shortcodes', link: '/comfortjob/shortcodes' },
+            // { text: 'Classic Widgets', link: '/comfortjob/classic-widgets' },
+            // { text: 'Elementor Widget', link: '/comfortjob/elementor-widgets' },
+            // { text: 'Gutenberg Blocks', link: '/comfortjob/gutenberg-blocks' },
+            // { text: 'Hooks and Filters', link: '/comfortjob/hooks-and-filters' },
+            // { text: 'Code Samples', link: '/comfortjob/code-samples' },
+          ],
+        },
+        {
+          text: 'Widgets',
+          collapsible: true,
+          items: [
+            { text: 'Classic Widgets', link: '/comfortjob/classic-widgets' },
+            { text: 'Elementor Widget', link: '/comfortjob/elementor-widgets' },
+            { text: 'Gutenberg Blocks', link: '/comfortjob/gutenberg-blocks' },
+          ],
         }
       ],
+
     
       // Sidebar for `/guide/` section
       '/comfortresume/': [
