@@ -1,15 +1,23 @@
+import { defineConfig } from 'vitepress';
+import dotenv from 'dotenv';
+
+//const dotenv = require('dotenv');
+
+dotenv.config();
+
 export default {
   title: "Comfort HRM",
   description: "An awesome docs template built by me",
   lang: 'en-US',
   // cleanUrls: true,
-  base: '/comforthrmdocs/',
+  //base: '/comforthrmdocs/',
+  base: process.env.VITEPRESS_BASE || '/comforthrmdocs/', // Default to '/' if the variable is not set
   // If this is disabled, when building it it will give deadlink errors if your markdown has the wrong links
   ignoreDeadLinks: true,
   
   themeConfig: {
     logo: "/logo.png",
-    siteTitle: "Comfort HRM",
+    siteTitle: "",
     search: {
       provider: "local",
     },
@@ -18,15 +26,6 @@ export default {
       { text: "Job", link: "/comfortjob/" },
       { text: "Resume", link: "/comfortresume/" },
       { text: "Job Application", link: "/comfortjobapp/" },
-      // {
-      //   // Dropdown Menu
-      //   text: "Changelog",
-      //   items: [
-      //     { text: "v0.0.1", link: "/item-1" },
-      //     { text: "v0.0.2", link: "/item-2" },
-      //     { text: "v0.0.3", link: "/item-3" },
-      //   ],
-      // },
     ],
     //Social Icons
     socialLinks: [
@@ -46,20 +45,49 @@ export default {
       '/comfortjob/': [
         {
           text: 'Comfort Job',
+          collapsible: false,
+        },
+        {
+          text: 'Getting Started',
           collapsible: true,
           items: [
             { text: 'How to install', link: '/comfortjob/how-to-install' },
             { text: 'How to Translate', link: '/comfortjob/how-to-translate' },
             { text: 'Template Override', link: '/comfortjob/template-override' },
-            { text: 'Shortcodes', link: '/comfortjob/shortcodes' },
-            { text: 'Classic Widgets', link: '/comfortjob/classic-widgets' },
-            { text: 'Elementor Widget', link: '/comfortjob/elementor-widgets' },
-            { text: 'Gutenberg Blocks', link: '/comfortjob/gutenberg-blocks' },
+            //{ text: 'Shortcodes', link: '/comfortjob/shortcodes' },
+            // { text: 'Classic Widgets', link: '/comfortjob/classic-widgets' },
+            // { text: 'Elementor Widget', link: '/comfortjob/elementor-widgets' },
+            // { text: 'Gutenberg Blocks', link: '/comfortjob/gutenberg-blocks' },
             { text: 'Hooks and Filters', link: '/comfortjob/hooks-and-filters' },
             { text: 'Code Samples', link: '/comfortjob/code-samples' },
           ],
+        },
+        {
+          text: 'Shortcode',
+          collapsible: true,
+          items: [
+            // { text: 'How to install', link: '/comfortjob/how-to-install' },
+            // { text: 'How to Translate', link: '/comfortjob/how-to-translate' },
+            // { text: 'Template Override', link: '/comfortjob/template-override' },
+            { text: '9 Shortcodes', link: '/comfortjob/shortcodes' },
+            // { text: 'Classic Widgets', link: '/comfortjob/classic-widgets' },
+            // { text: 'Elementor Widget', link: '/comfortjob/elementor-widgets' },
+            // { text: 'Gutenberg Blocks', link: '/comfortjob/gutenberg-blocks' },
+            // { text: 'Hooks and Filters', link: '/comfortjob/hooks-and-filters' },
+            // { text: 'Code Samples', link: '/comfortjob/code-samples' },
+          ],
+        },
+        {
+          text: 'Widgets',
+          collapsible: true,
+          items: [
+            { text: 'Classic Widgets', link: '/comfortjob/classic-widgets' },
+            { text: 'Elementor Widget', link: '/comfortjob/elementor-widgets' },
+            { text: 'Gutenberg Blocks', link: '/comfortjob/gutenberg-blocks' },
+          ],
         }
       ],
+
     
       // Sidebar for `/guide/` section
       '/comfortresume/': [
@@ -93,37 +121,7 @@ export default {
           ],
         },
       ],
-      
      },
-
-    
-    //Sidebar
-    // sidebar: [
-    //   {
-    //     text: "Section A",
-    //     collapsible: true,
-    //     items: [
-    //       { text: "Introduction", link: "/introduction" },
-    //       { text: "Getting Started", link: "/getting-started" },
-    //     ],
-    //   },
-    //   {
-    //     text: "Section B",
-    //     collapsible: false,
-    //     items: [
-    //       { text: "Introduction", link: "/introduction" },
-    //       { text: "Getting Started", link: "/getting-started" },
-    //     ],
-    //   },
-    //   {
-    //     text: "Section C",
-    //     collapsible: true,
-    //     items: [
-    //       { text: "Introduction", link: "/introduction" },
-    //       { text: "Getting Started", link: "/getting-started" },
-    //     ],
-    //   },
-    // ],
     // you can disable the previous and next page here
     docFooter: {
       prev: 'Previous',
