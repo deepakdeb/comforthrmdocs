@@ -25,36 +25,43 @@ jobs:
         with:
           fetch-depth: 0
 
-      # Setup Node.js
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm  # or pnpm / yarn
 
-      # Setup Pages action
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
-      # Install dependencies
+      - name: Create .env file
+        run: |
+          echo "VITEPRESS_BASE_URL=${{ env.VITEPRESS_BASE_URL }}" >> .env
+          echo "VITEPRESS_BASE=${{ env.VITEPRESS_BASE }}" >> .env
+
+      # Debug .env content
+      - name: Verify .env file contents
+        run: cat .env
+
+      - name: Debug VITEPRESS_BASE_URL
+        run: echo "VITEPRESS_BASE_URL=${{ env.VITEPRESS_BASE_URL }}"
+
       - name: Install dependencies
         run: npm ci # or pnpm install / yarn install / bun install
 
-      # Create .env file from environment variables
-      - name: Create .env file
-        run: |
-          echo "VITEPRESS_BASE=${{ secrets.VITEPRESS_BASE }}" >> .env
-          echo "VITEPRESS_BASE_URL=${{ secrets.VITEPRESS_BASE_URL }}" >> .env
+      # - name: Create .env file
+      #   run: |
+      #     echo "VITEPRESS_BASE_URL=${{ secrets.VITEPRESS_BASE_URL }}" >> .env
+      #     echo "VITEPRESS_BASE=${{ secrets.VITEPRESS_BASE }}" >> .env
 
-      # Check if .env file was created (for debugging)
-      - name: Verify .env file contents
-        run: cat .env
+      # # Debug .env content
+      # - name: Verify .env file contents
+      #   run: cat .env
 
       # Build with VitePress
       - name: Build with VitePress
         run: npm run docs:build # or pnpm docs:build / yarn docs:build / bun run docs:build
 
-      # Upload artifact
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
