@@ -1,9 +1,17 @@
+import { defineConfig } from 'vitepress';
+import dotenv from 'dotenv';
+
+//const dotenv = require('dotenv');
+
+dotenv.config();
+
 export default {
   title: "Comfort HRM",
   description: "An awesome docs template built by me",
   lang: 'en-US',
   // cleanUrls: true,
-  base: '/comforthrmdocs/',
+  //base: '/comforthrmdocs/',
+  base: process.env.VITEPRESS_BASE || '/comforthrmdocs/', // Default to '/' if the variable is not set
   // If this is disabled, when building it it will give deadlink errors if your markdown has the wrong links
   ignoreDeadLinks: true,
   
