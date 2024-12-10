@@ -5,12 +5,12 @@
   <p>This repository serves as a resource for the tutorial, <a href="https://www.freecodecamp.org/news/how-to-build-a-modern-documentation-site-with-vitepress/">How to Build a Modern Documentation Site with VitePress</a> posted on freeCodeCamp</p>
 </div>
 
-## Run project locally
+## Run project locally 
 
 Use this command below to boot this project locally.
 
 ```bash
-git clone https://github.com/Evavic44/Comfort HRM.git
+git clone https://github.com/codeboxrcodehub/comforthrmdocs.git
 
 cd Comfort HRM
 
