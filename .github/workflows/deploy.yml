@@ -45,7 +45,7 @@ jobs:
         run: cat .env
 
       - name: Debug VITEPRESS_BASE_URL
-        run: 
+        run: |
          echo "VITEPRESS_BASE_URL=${{ env.VITEPRESS_BASE_URL }}"
          echo "VITEPRESS_BASE_URL=$VITEPRESS_BASE_URL"
          echo "VITEPRESS_BASE_URL=${{ secrets.VITEPRESS_BASE_URL }}"
