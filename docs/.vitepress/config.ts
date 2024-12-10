@@ -9,7 +9,7 @@ export default {
   
   themeConfig: {
     logo: "/logo.png",
-    siteTitle: "Comfort HRM",
+    siteTitle: "",
     search: {
       provider: "local",
     },
@@ -18,15 +18,6 @@ export default {
       { text: "Job", link: "/comfortjob/" },
       { text: "Resume", link: "/comfortresume/" },
       { text: "Job Application", link: "/comfortjobapp/" },
-      // {
-      //   // Dropdown Menu
-      //   text: "Changelog",
-      //   items: [
-      //     { text: "v0.0.1", link: "/item-1" },
-      //     { text: "v0.0.2", link: "/item-2" },
-      //     { text: "v0.0.3", link: "/item-3" },
-      //   ],
-      // },
     ],
     //Social Icons
     socialLinks: [
@@ -93,37 +84,7 @@ export default {
           ],
         },
       ],
-      
      },
-
-    
-    //Sidebar
-    // sidebar: [
-    //   {
-    //     text: "Section A",
-    //     collapsible: true,
-    //     items: [
-    //       { text: "Introduction", link: "/introduction" },
-    //       { text: "Getting Started", link: "/getting-started" },
-    //     ],
-    //   },
-    //   {
-    //     text: "Section B",
-    //     collapsible: false,
-    //     items: [
-    //       { text: "Introduction", link: "/introduction" },
-    //       { text: "Getting Started", link: "/getting-started" },
-    //     ],
-    //   },
-    //   {
-    //     text: "Section C",
-    //     collapsible: true,
-    //     items: [
-    //       { text: "Introduction", link: "/introduction" },
-    //       { text: "Getting Started", link: "/getting-started" },
-    //     ],
-    //   },
-    // ],
     // you can disable the previous and next page here
     docFooter: {
       prev: 'Previous',
