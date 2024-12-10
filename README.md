@@ -1,4 +1,4 @@
-<div align="center">
+<div align="center t">
   <img src="https://Comfort HRM.vercel.app/logo-big.svg" width="100px" height="100px" alt="Comfort HRM logo" />
   <h1>Comfort HRM</h1>
   <p>A docs template built using <a href="https://vitepress.vuejs.org">VitePress</a></p>
